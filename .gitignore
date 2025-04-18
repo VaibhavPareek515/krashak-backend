@@ -1,0 +1,19 @@
+# Node modules (never push this)
+node_modules/
+
+# Environment variables (keep secrets out of GitHub)
+.env
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional: IDE/editor folders
+.vscode/
+.idea/
+
+# Optional: local folders (e.g., temporary or generated content)
+.qodo/
