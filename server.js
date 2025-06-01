@@ -8,6 +8,7 @@ dotenv.config();
 
 // Import routes
 const authRoutes = require('./routes/auth');
+const orderRoutes = require('./routes/order');
 
 // Initialize express app
 const app = express();
@@ -23,6 +24,11 @@ mongoose.connect(process.env.MONGODB_URI)
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/orders', orderRoutes);
+
+app.get("/",(req,res)=> {
+    res.send("working...")
+})
 
 // Error handling middleware
 app.use((err, req, res, next) => {
